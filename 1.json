@@ -1,0 +1,199 @@
+{
+  "company": {
+    "name": "Tech Solutions Inc",
+    "founded": 1995,
+    "locations": ["New York", "London", "Tokyo", "Singapore"],
+    "departments": {
+      "engineering": {
+        "employees": [
+          {
+            "id": 1,
+            "name": "John Smith",
+            "title": "Senior Developer",
+            "skills": ["Python", "C++", "JavaScript"],
+            "projects": [
+              {
+                "name": "Project Alpha",
+                "status": "completed",
+                "duration": 6,
+                "team_size": 8,
+                "technologies": ["React", "Node.js", "MongoDB"],
+                "metrics": {
+                  "bugs_fixed": 127,
+                  "features_added": 45,
+                  "code_coverage": 92,
+                  "performance_improvement": "35%"
+                }
+              },
+              {
+                "name": "Project Beta",
+                "status": "in_progress",
+                "duration": 3,
+                "team_size": 5,
+                "technologies": ["Vue.js", "Django", "PostgreSQL"],
+                "metrics": {
+                  "bugs_fixed": 83,
+                  "features_added": 28,
+                  "code_coverage": 88,
+                  "performance_improvement": "22%"
+                }
+              }
+            ],
+            "performance_reviews": [
+              {
+                "year": 2023,
+                "quarter": 1,
+                "rating": 4,
+                "comments": "Excellent leadership and technical skills"
+              },
+              {
+                "year": 2023,
+                "quarter": 2,
+                "rating": 4,
+                "comments": "Outstanding contribution to Project Alpha"
+              }
+            ]
+          },
+          {
+            "id": 2,
+            "name": "Sarah Johnson",
+            "title": "DevOps Engineer",
+            "skills": ["Docker", "Kubernetes", "AWS"],
+            "projects": [
+              {
+                "name": "Cloud Migration",
+                "status": "completed",
+                "duration": 8,
+                "team_size": 6,
+                "technologies": ["AWS", "Terraform", "Jenkins"],
+                "metrics": {
+                  "deployment_time": "reduced by 65%",
+                  "infrastructure_costs": "reduced by 40%",
+                  "uptime": "99.99%",
+                  "incident_response": "improved by 45%"
+                }
+              }
+            ],
+            "performance_reviews": [
+              {
+                "year": 2023,
+                "quarter": 1,
+                "rating": 4,
+                "comments": "Exceptional problem-solving abilities"
+              }
+            ]
+          }
+        ],
+        "projects": [
+          {
+            "id": "PRJ-001",
+            "name": "Project Alpha",
+            "budget": 500000,
+            "timeline": {
+              "start_date": "2023-01-15",
+              "end_date": "2023-07-15",
+              "milestones": [
+                {
+                  "name": "Planning Phase",
+                  "completed": true,
+                  "date": "2023-02-15"
+                },
+                {
+                  "name": "Development Phase",
+                  "completed": true,
+                  "date": "2023-05-30"
+                },
+                {
+                  "name": "Testing Phase",
+                  "completed": true,
+                  "date": "2023-06-30"
+                },
+                {
+                  "name": "Deployment",
+                  "completed": true,
+                  "date": "2023-07-15"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "marketing": {
+        "employees": [
+          {
+            "id": 3,
+            "name": "Emily Davis",
+            "title": "Marketing Director",
+            "campaigns": [
+              {
+                "name": "Summer Product Launch",
+                "budget": 250000,
+                "channels": ["Social Media", "Email", "PPC"],
+                "metrics": {
+                  "reach": 1500000,
+                  "engagement_rate": "4.2%",
+                  "conversion_rate": "2.8%",
+                  "roi": "185%"
+                }
+              }
+            ],
+            "performance_reviews": [
+              {
+                "year": 2023,
+                "quarter": 2,
+                "rating": 4,
+                "comments": "Successful product launch campaign"
+              }
+            ]
+          }
+        ],
+        "hej" : 123,
+        "budget": {
+          "2023": {
+            "total": 1200000,
+            "allocated": {
+              "digital": 500000,
+              "traditional": 300000,
+              "events": 250000,
+              "research": 150000
+            },
+            "quarterly_breakdown": {
+              "Q1": 280000,
+              "Q2": 340000,
+              "Q3": 310000,
+              "Q4": 270000
+            }
+          }
+        }
+      }
+    },
+    "financial_data": {
+      "2023": {
+        "revenue": 25000000,
+        "expenses": 18000000,
+        "profit": 7000000,
+        "growth_rate": "15%",
+        "quarterly_results": [
+          {
+            "quarter": "Q1",
+            "revenue": 5800000,
+            "expenses": 4200000,
+            "profit": 1600000
+          },
+          {
+            "quarter": "Q2",
+            "revenue": 6200000,
+            "expenses": 4500000,
+            "profit": 1700000
+          }
+        ],
+        "investments": {
+          "research_development": 3000000,
+          "marketing": 2000000,
+          "infrastructure": 1500000,
+          "training": 500000
+        }
+      }
+    }
+  }
+}

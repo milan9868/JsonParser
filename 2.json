@@ -1,0 +1,27 @@
+{
+  "person": {
+    "name": "John Doe",
+    "age": 30,
+    "address": {
+      "street": "123 Main St",
+      "city": "Boston",
+      "country": "USA"
+    },
+    "hobbies": [
+      {
+        "name": "reading",
+        "frequency": "daily",
+        "favorite_books": ["1984", "Dune"]
+      },
+      {
+        "name": "gaming",
+        "frequency": "weekly",
+        "favorite_games": ["Chess", "Portal"]
+      }
+    ],
+    "active": true
+  },
+  "roki" : "marciano",
+
+  "123": [1,2,3]
+}
