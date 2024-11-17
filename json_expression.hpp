@@ -20,6 +20,7 @@ private:
     bool isOperator(char c);
     int precedence(char c);
     bool isSimpleExpression();
+    bool isValidVariableChar(char c);
 };
 
 #endif // JEXPRESSION_H

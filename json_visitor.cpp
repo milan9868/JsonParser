@@ -53,7 +53,7 @@ JsonValue JsonValueVisitor::operator()(const std::string& str) const {
     return str;
 }
 
-JsonValue JsonValueVisitor::operator()(int num) const {
+JsonValue JsonValueVisitor::operator()(double num) const {
     return num;
 }
 
@@ -135,6 +135,6 @@ int JsonValueVisitor::getArrayIndexNested() {
     }
 
     JsonValueVisitor visitor(new_expression);
-    int x = std::get<int>(visitor.visit(root).value);
+    int x = std::get<double>(visitor.visit(root).value);
     return x;
 }

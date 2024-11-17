@@ -20,13 +20,13 @@ using JsonArray = std::vector<JsonValue>;
 
 struct JsonValue {
 
-    std::variant<JsonObject, JsonArray, std::string, int, bool, nullptr_t> value;
+    std::variant<JsonObject, JsonArray, std::string, double, bool, nullptr_t> value;
 
     JsonValue() {}
     JsonValue(const JsonObject& obj) : value(obj) {}
     JsonValue(const JsonArray& arr) : value(arr) {}
     JsonValue(const std::string& s) : value(s) {}
-    JsonValue(int i) : value(i) {}
+    JsonValue(double i) : value(i) {}
     JsonValue(bool b) : value(b) {}
     JsonValue(nullptr_t n) : value(n) {}
 
@@ -64,7 +64,7 @@ private:
     JsonObject members();
     std::pair<std::string, JsonValue> member();
     std::string string() ;
-    int number() ;
+    double number() ;
     JsonArray array() ;
     JsonValue True() ;
 

@@ -150,7 +150,7 @@ std::string JsonParser::string() {
 }
 
 
-int JsonParser::number() {
+double JsonParser::number() {
 
     int initial_position = cursor;
 
@@ -162,7 +162,26 @@ int JsonParser::number() {
         moveCursorForward();
     }
 
-    return std::stoi(source.substr(initial_position,cursor-initial_position));
+    if (source[cursor] == '.') {
+        moveCursorForward();
+        while (cursorAtDigit()) {
+            moveCursorForward();
+        }
+    }
+
+    // scientific notation
+    if (source[cursor] == 'e' || source[cursor] == 'E') {
+        moveCursorForward();
+
+        if (source[cursor] == '+' || source[cursor] == '-') {
+            moveCursorForward();
+        }
+        while (cursorAtDigit()) {
+            moveCursorForward();
+        }
+    }
+
+    return std::stod(source.substr(initial_position, cursor-initial_position));
 }
 
 JsonArray JsonParser::array() {

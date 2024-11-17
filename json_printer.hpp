@@ -16,7 +16,7 @@ public:
 
     std::string operator()(const std::string& str) const;
 
-    std::string operator()(int num) const;
+    std::string operator()(double num) const;
 
     std::string operator()(bool b) const;
 

@@ -22,7 +22,7 @@ double JsonExpression::evaluate() {
     for (const std::string& token : postfix) {
         // If token is a number
         if (isdigit(token[0]) || (token[0] == '-' && token.length() > 1)) {
-            stack.push(std::stoi(token));
+            stack.push(std::stod(token));
         }
         // If token is a min/max function with argument count (e.g., "m3" or "M2")
         else if (token[0] == 'm' || token[0] == 'M') {
@@ -168,8 +168,7 @@ std::vector<std::string> JsonExpression::toPostfix() {
         }
         else {
             std::string variable;
-            while (i < jsonExpression.size() &&
-                (std::isalnum(jsonExpression[i]) || jsonExpression[i] == '.' || jsonExpression[i] == '[' || jsonExpression[i] == ']')) {
+            while (i < jsonExpression.size() && isValidVariableChar(jsonExpression[i])) {
                 variable += jsonExpression[i++];
                 }
 
@@ -197,10 +196,10 @@ std::vector<std::string> JsonExpression::toPostfix() {
                                 exit(EXIT_FAILURE);
                             }
                             // Find minimum value in array
-                            int min_val = std::numeric_limits<int>::max();
+                            double min_val = std::numeric_limits<double>::max();
                             for (const auto& elem : arr) {
-                                if (std::holds_alternative<int>(elem.value)) {
-                                    min_val = std::min(min_val, std::get<int>(elem.value));
+                                if (std::holds_alternative<double>(elem.value)) {
+                                    min_val = std::min(min_val, std::get<double>(elem.value));
                                 }
                             }
                             output.push_back(std::to_string(min_val));
@@ -224,10 +223,10 @@ std::vector<std::string> JsonExpression::toPostfix() {
                                 exit(EXIT_FAILURE);
                             }
                             // Find maximum value in array
-                            int max_val = std::numeric_limits<int>::min();
+                            double max_val = std::numeric_limits<double>::min();
                             for (const auto& elem : arr) {
-                                if (std::holds_alternative<int>(elem.value)) {
-                                    max_val = std::max(max_val, std::get<int>(elem.value));
+                                if (std::holds_alternative<double>(elem.value)) {
+                                    max_val = std::max(max_val, std::get<double>(elem.value));
                                 }
                             }
                             output.push_back(std::to_string(max_val));
@@ -264,7 +263,7 @@ std::vector<std::string> JsonExpression::toPostfix() {
 
 
 
-            int number = std::get<int>(value.value);
+            double number = std::get<double>(value.value);
             output.push_back(std::to_string(number));
             continue;
         }
@@ -323,4 +322,12 @@ bool JsonExpression::isSimpleExpression() {
     }
 
     return true;
+}
+
+bool JsonExpression::isValidVariableChar(char c) {
+
+
+    return !isOperator(c) && c != ' ' && c != ')';
+
+
 }

@@ -1,5 +1,5 @@
 CXX = g++
-CXXFLAGS = -std=c++17 -I ~/googletest/googletest/include
+CXXFLAGS = -std=c++17 -g -I ~/googletest/googletest/include
 LDFLAGS = -L ~/googletest/build/lib -lgtest -lgtest_main -pthread
 
 # Object files for the main program (excluding the main.cpp)

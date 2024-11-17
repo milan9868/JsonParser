@@ -21,7 +21,7 @@ public:
 
     JsonValue operator()(const std::string& str) const ;
 
-    JsonValue operator()(int num) const;
+    JsonValue operator()(double num) const;
 
     JsonValue operator()(bool b) const;
 

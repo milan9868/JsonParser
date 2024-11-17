@@ -40,7 +40,7 @@ std::string JsonValuePrinter::operator()(const std::string& str) const {
     return str;
 }
 
-std::string JsonValuePrinter::operator()(int num) const {
+std::string JsonValuePrinter::operator()(double num) const {
 
     return std::to_string(num);
 
